@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+
+RewriteRule ^test/([0-9]+) index.php?table=test&id=$1
+RewriteRule ^test index.php?table=test 
+ 
